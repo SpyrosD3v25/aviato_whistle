@@ -48,3 +48,7 @@ tzdata==2022.1
 urllib3==1.26.9
 virtualenv==20.14.0
 whitenoise==6.0.0
+RUN apt-get update
+RUN apt install -y libgl1-mesa-glx
+
+COPY requirements.txt requirements.txt

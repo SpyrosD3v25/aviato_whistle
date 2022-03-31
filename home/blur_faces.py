@@ -5,6 +5,7 @@ This file is responsible for bluring faces from the images so the website does n
 import numpy as np
 import cv2 as cv
 import matplotlib.pyplot as plt
+from django.conf import settings
     
 class Blur:
     def __init__(self): pass
@@ -24,7 +25,7 @@ class Blur:
           
         ##self.plotImages(image)
           
-        face_detect = cv.CascadeClassifier('/home/spyros/blog-application-django (1)/home/haarcascade_frontalface_alt.xml')
+        face_detect = cv.CascadeClassifier(settings.MEDIA_ROOT + 'haarcascade_frontalface_default.xml')
         face_cords = harr_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=1 )
         print(face_cords)
         for x, y, w, h in face_cords:

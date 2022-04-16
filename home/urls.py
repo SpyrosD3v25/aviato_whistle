@@ -14,6 +14,7 @@ urlpatterns = [
     path("edit_blog_post/<str:title>/", UpdatePostView.as_view(), name="edit_blog_post"),
     path("delete_blog_post/<str:title>/", views.Delete_Blog_Post, name="delete_blog_post"),
     path("search/", views.search, name="search"),
+    path("about", views.about, name="about"),
 
     
 #     profile

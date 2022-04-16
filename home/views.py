@@ -46,6 +46,9 @@ def search(request):
     else:
         return render(request, "search.html", {})
 
+def about(request):
+    return render(request, "about.html")
+
 @login_required(login_url = '/login')
 def add_blogs(request):
     if request.method=="POST":
@@ -53,13 +56,15 @@ def add_blogs(request):
         if form.is_valid():
             blogpost = form.save(commit=False)
             blogpost.author = request.user
-            print("----------------|" + settings.MEDIA_ROOT +  blogpost.image.url + "|----------------")
+            absolute_url = settings.MEDIA_ROOT + blogpost.image.url
+            absolute_url.replace("/media/", '\\media\\')
+            print("----------------|" + absolute_url + "|----------------")
             blogpost.save()
             obj = form.instance
             alert = True
             
             blurOBJ = Blur()
-            absolute_url = settings.MEDIA_ROOT + blogpost.image.url
+
             blurOBJ.run(absolute_url)
 
             #sendOBJ = Send(blogpost.category, blogpost.image, '+6987735000')

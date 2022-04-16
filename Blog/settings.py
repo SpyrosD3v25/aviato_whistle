@@ -123,6 +123,7 @@ STATICFILES_DIRS = [
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'home')
 MEDIA_URL = '/media/'
+MEDIA_PATH = '\\media\\'
 
 
 import dj_database_url 

@@ -2,6 +2,8 @@
 
 Aviato is a whistle-blow platform that is build for citizens.
 
+Youtube Trailer: https://www.youtube.com/watch?v=X8I-oQymna0
+
 We all deserve to live in a better place, this is what aviato is all about; making the world we live in a better place.
 
 FOR WINDOWS:

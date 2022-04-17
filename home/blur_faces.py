@@ -33,7 +33,6 @@ class Blur:
             blur_face = cv.GaussianBlur(blur_face,(23, 23), 30)
             image[y:y+blur_face.shape[0], x:x+blur_face.shape[1]] = blur_face
 
-        #show fucking image, please motherfucking piece of shit
         #cv.imshow("Blur Faces", image)
         #cv.waitKey(0)
 
